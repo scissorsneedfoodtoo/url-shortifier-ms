@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  div(class='container')
+    h1(class='header') URL Shortifier Microservice API
+    blockquote
+      p
+        | User Stories:
+      ul
+        | 1) I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.
+      ul
+        | 2) If I pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will contain an error instead.
+      ul
+        | 3) When I visit that shortened URL, it will redirect me to my original link.
+
+    h3 Example usage:
+    code https://url-shorty-ms.glitch.me/https://www.google.com
+    br
+    code https://url-shorty-ms.glitch.me/http://foo.com:80
+
+    h3 Example output:
+    code { "original_url":"http://foo.com:80", "short_url":"https://url-shorty-ms.glitch.me/8170" }
+    br
+    code { error: "URL Invalid" }
