@@ -5,7 +5,7 @@ const shortid = require('shortid')
 const MONGODB_URI = 'mongodb://'+process.env.USER+':'+process.env.PASS+'@'+process.env.HOST+':'+process.env.DB_PORT+'/'+process.env.DB;
 
 // connect to mLab url-data db
-mongoose.connect(MONGODB_URI, {useMongoClient: true}) // {useMongoClient: true} arg to prevent error msg from polluting the console
+mongoose.connect(MONGODB_URI) // {useMongoClient: true} arg to prevent error msg from polluting the console
 
 // open connection through mongoose
 let db = mongoose.connection
