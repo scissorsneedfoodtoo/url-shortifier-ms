@@ -2,8 +2,9 @@
 // where your node app starts
 
 // init project
+require('dotenv').config()
+
 const express = require('express')
-const mongoose = require('mongoose')
 const shortid = require('shortid')
 const request = require('request')
 let app = express();
